@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="#fff"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/user_portrait"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/user_portrait"
+        android:text="天王哥"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/user_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/user_portrait"
+        android:text="帅呆啦啦啦阿拉"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/fans_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_desc"
+        android:layout_toRightOf="@id/user_portrait"
+        android:text="粉丝2334"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/attention_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_desc"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/fans_num"
+        android:text="关注2334"
+        android:textSize="18sp" />
+</RelativeLayout>

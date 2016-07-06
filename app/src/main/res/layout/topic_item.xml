@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/topic_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="冰与火是李老师了"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/attention_answer_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_alignParentBottom="true"
+        android:text="9人关注，10人回答" />
+
+    <TextView
+        android:id="@+id/new_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="12" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ccc" />
+</RelativeLayout>

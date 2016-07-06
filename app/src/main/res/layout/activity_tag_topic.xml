@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#fff"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tag_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电影"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="关注"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/topic_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="105话题"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/reply_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="960回复"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/attention_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="102关注"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:tabMode="scrollable" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white" />
+
+</LinearLayout>

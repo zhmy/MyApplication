@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="topic_num">%1$d个话题</string>
+    <string name="reply_num">%1$d个回复</string>
+    <string name="attention_num">%1$d人关注</string>
+    <string name="attention_answer_num">%1$d人关注，%2$d人回答</string>
+</resources>
