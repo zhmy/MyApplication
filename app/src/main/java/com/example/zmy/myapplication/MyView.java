@@ -26,6 +26,7 @@ public class MyView extends View {
     private TextPaint mTextPaint;
     private float mTextWidth;
     private float mTextHeight;
+    private Paint mPaint;
 
     public MyView(Context context) {
         super(context);
@@ -73,6 +74,12 @@ public class MyView extends View {
 
         // Update TextPaint and text measurements from attributes
         invalidateTextPaintAndMeasurements();
+
+        mPaint = new Paint();
+        mPaint.setColor(Color.BLUE);//设置画笔的颜色
+        mPaint.setStrokeWidth(3);//设置画笔的宽度
+        mPaint.setAntiAlias(true);//设置看锯齿
+        mPaint.setStyle(Paint.Style.STROKE);//设置成空心
     }
 
     private void invalidateTextPaintAndMeasurements() {
@@ -82,6 +89,8 @@ public class MyView extends View {
 
         Paint.FontMetrics fontMetrics = mTextPaint.getFontMetrics();
         mTextHeight = fontMetrics.bottom;
+
+
     }
 
     @Override
@@ -122,7 +131,7 @@ public class MyView extends View {
 
         RectF re2 = new RectF(contentWidth/8,100,contentWidth/8 + 70,100 + 50);
         //绘制圆角矩形
-        canvas.drawRoundRect(re2, 15, 15, paint);
+        canvas.drawRoundRect(re2, 10, 10, paint);
 
         //绘制圆形
         canvas.drawCircle(contentWidth/8, 190, 30, paint);
@@ -135,6 +144,9 @@ public class MyView extends View {
         //绘制三角形
         canvas.drawPath(path3, paint);
 
+        RectF rectF = new RectF(20,20,180,180);
+        mPaint.setColor(Color.YELLOW);
+        canvas.drawArc(rectF,0,30,true,mPaint);
 
     }
 

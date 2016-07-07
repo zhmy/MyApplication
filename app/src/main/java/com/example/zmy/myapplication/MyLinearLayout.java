@@ -88,32 +88,29 @@ public class MyLinearLayout extends LinearLayout {
                 initY = y;
                 break;
             case MotionEvent.ACTION_MOVE:
-                Log.e("zmy", "onTouchEvent ACTION_MOVE");
-                int diffY = (int) (y - initY);
-                int diffX = (int) (x - initX);
-                Log.e("zmy", "diffY = "+diffY);
-                if (diffY > mTouchSlop || diffY < 0) {
-                    if (Math.abs(diffY) > Math.abs(diffX)) {
-                        View view = getChildAt(1);
-                        int[] position = new int[2];
-                        view.getLocationInWindow(position);
-                        int dp = dip2px(mContext, 200) +getStatusBarHeight();
-                        if (position[1] + diffY > 0 || position[1] + diffY <= dp) {
-                            Log.e("zmy", "move top = "+ position[1]);
-                            ViewCompat.animate(this)
-                                    .translationY(diffY)
-                                    .setDuration(0)
-                                    .start();
-                        } else {
-                            onInterceptTouchEvent(event);
-                        }
+                float diffY = y - initY;
+                float diffX = x - initX;
+                Log.e("zmy", "ACTION_MOVE y = "+y + "  initY = "+ initY + "  diffY = "+diffY);
+                if (Math.abs(diffY) > Math.abs(diffX)) {
+                    View view = getChildAt(1);
+                    int[] position = new int[2];
+                    view.getLocationInWindow(position);
+                    int dp = dip2px(mContext, 200) +getStatusBarHeight();
+                    if (position[1] + diffY > getStatusBarHeight() || position[1] + diffY <= dp) {
+//                        Log.e("zmy", "move top = "+ position[1]);
+//                        ViewCompat.animate(this)
+//                                .translationY(diffY)
+//                                .setDuration(0)
+//                                .start();
+
+                    } else {
+//                        onInterceptTouchEvent(event);
                     }
                 }
+                initY = y;
                 break;
             case MotionEvent.ACTION_UP:
                 Log.e("zmy", "onTouchEvent ACTION_UP");
-                initX = 0;
-                initY = 0;
                 break;
         }
         return true;

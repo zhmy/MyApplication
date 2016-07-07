@@ -12,6 +12,8 @@
         <activity android:name=".HelloActivity">
         </activity>
         <activity android:name=".AddHeadActivity">
+        </activity>
+        <activity android:name=".AddHead2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
